@@ -1,6 +1,6 @@
 using System;
 
-namespace Delopgave12
+namespace Delopgave11
 {
    [Serializable]
    public class Agent

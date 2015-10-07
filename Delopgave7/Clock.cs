@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Delopgave13
+namespace Delopgave12
 {
     class Clock : INotifyPropertyChanged
     {

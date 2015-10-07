@@ -1,9 +1,9 @@
-﻿<Window x:Class="Delopgave9.MainWindow"
+﻿<Window x:Class="Delopgave8.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Delopgave9"
+        xmlns:local="clr-namespace:Delopgave8"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
@@ -56,22 +56,14 @@
         </Menu>
         <ToolBar DockPanel.Dock="Top"
                  Background="Aqua">
-            <Button Command="{Binding PrevCommand}"
-                    Width="32">
-                <Image Source="Images/Back.png" Stretch="Uniform"></Image>
-                    </Button>
-            <Button Command="{Binding NextCommand}"
-                    Width="32">
-                <Image Source="Images/Next.png" Stretch="Uniform">
-                </Image> </Button>
-            <Button Command="{Binding AddCommand}"
-                    Width="32">
-                <Image Source="Images/Add.jpg" Stretch="Uniform">
-                </Image> </Button>
-            <Button Command="{Binding DeleteCommand}"
-                    Width="32">
-                <Image Source="Images/Delete.jpg" Stretch="Uniform"></Image>
-            </Button>
+            <Button Content="&lt;"
+                    Command="{Binding PrevCommand}"></Button>
+            <Button Content="&gt;" 
+                    Command="{Binding NextCommand}"></Button>
+            <Button Content="+" 
+                    Command="{Binding AddCommand}"></Button>
+            <Button Content="-" 
+                    Command="{Binding DeleteCommand}"></Button>
             <Label Content="File Name:" 
                    FontWeight="Bold"></Label>
             <TextBox x:Name="tbxFileName"

@@ -8,8 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Xml.Serialization;
 
-
-namespace Delopgave9
+namespace Delopgave8
 {
     public class Agents : ObservableCollection<Agent>, INotifyPropertyChanged
     {

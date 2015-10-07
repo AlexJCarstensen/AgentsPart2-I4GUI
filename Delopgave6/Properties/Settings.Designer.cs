@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Delopgave12.Properties
+namespace Delopgave11.Properties
 {
 
 
