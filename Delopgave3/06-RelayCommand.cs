@@ -6,7 +6,7 @@ using System.Windows.Input;
 // Downloaded from: http://mvvmfoundation.codeplex.com/
 //
 
-namespace Delopgave8
+namespace Delopgave3
 {
     /// <summary>
     /// A command whose sole purpose is to 

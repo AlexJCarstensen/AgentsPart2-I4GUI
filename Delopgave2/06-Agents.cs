@@ -5,10 +5,9 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Xml.Serialization;
 
-namespace Delopgave7
+namespace Delopgave2
 {
     public class Agents : ObservableCollection<Agent>, INotifyPropertyChanged
     {
@@ -180,29 +179,7 @@ namespace Delopgave7
         {
             Application.Current.MainWindow.Close();
         }
-
-        private ICommand _colorCommand;
-        public ICommand ColorCommand => _colorCommand ?? (_colorCommand = new RelayCommand<string>(ColorCommand_Execute));
-
-        private void ColorCommand_Execute(string colorStr)
-        {
-            SolidColorBrush newBrush = SystemColors.WindowBrush;
-
-            try
-            {
-                if (colorStr != null)
-                {
-                    if(colorStr != "Default")
-                        newBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorStr));
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Unknown color name, default color is used", "program Error");
-            }
-            Application.Current.MainWindow.Resources["myBrush"] = newBrush;
-        }
-
+        
         #endregion //Commands
 
 #region Properties

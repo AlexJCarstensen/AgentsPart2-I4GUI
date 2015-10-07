@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Delopgave11
+namespace Delopgave6
 {
     /// <summary>
     /// Interaction logic for App.xaml

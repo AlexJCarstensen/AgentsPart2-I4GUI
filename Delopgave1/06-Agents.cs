@@ -7,7 +7,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Xml.Serialization;
 
-namespace Delopgave7
+namespace Delopgave1
 {
     public class Agents : ObservableCollection<Agent>, INotifyPropertyChanged
     {

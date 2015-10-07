@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace Delopgave11
+namespace Delopgave6
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -9,7 +9,7 @@ using System.Windows.Media;
 using System.Xml.Serialization;
 
 
-namespace Delopgave9
+namespace Delopgave4
 {
     public class Agents : ObservableCollection<Agent>, INotifyPropertyChanged
     {
