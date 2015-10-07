@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Threading;
 
-namespace Delopgave7
+namespace Delopgave1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

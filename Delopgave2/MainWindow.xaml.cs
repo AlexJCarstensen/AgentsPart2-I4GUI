@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Delopgave2
 {
@@ -20,9 +21,24 @@ namespace Delopgave2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+       
+            private DispatcherTimer timer = new DispatcherTimer();
+            private Clock clock = new Clock();
+
+            public MainWindow()
+            {
+                InitializeComponent();
+
+                spClock.DataContext = clock;
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Tick += new EventHandler(Timer_Tick);
+                timer.Start();
+            }
+
+            private void Timer_Tick(object sender, EventArgs e)
+            {
+                clock.Update();
+            }
+        
     }
 }

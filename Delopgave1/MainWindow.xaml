@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:delopgave7="clr-namespace:Delopgave7"
+        xmlns:local="clr-namespace:Delopgave1"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="375"
         Width="525"
         SizeToContent="WidthAndHeight">
     <Window.DataContext>
-        <delopgave7:Agents></delopgave7:Agents>
+        <local:Agents></local:Agents>
     </Window.DataContext>
     <Window.Resources>
         <SolidColorBrush x:Key="myBrush"
