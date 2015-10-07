@@ -1,0 +1,63 @@
+﻿<Application x:Class="Delopgave13.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Delopgave13"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+       
+            <SolidColorBrush x:Key="myBrush" Color="Aqua"></SolidColorBrush>
+            <SolidColorBrush x:Key="myLabelBrush" Color="BlueViolet"></SolidColorBrush>
+
+            <Style x:Key="TextboxStyle" TargetType="TextBox">
+                <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+                <Setter Property="FontWeight" Value="Bold"></Setter>
+            </Style>
+
+            <Style x:Key="BondStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextboxStyle}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Path=ID}" Value="007">
+                        <Setter Property="Foreground" Value="Red"></Setter>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="ButtonToolbarStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="Red"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="Width" Value="20"></Setter>
+                <Style.Triggers>
+                    <Trigger Property="Button.IsMouseOver" Value="True">
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect ShadowDepth="2"></DropShadowEffect>
+                            </Setter.Value>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="FontFamily" Value="Calibri"></Setter>
+                <Setter Property="FontStyle" Value="italic"></Setter>
+                <Setter Property="Foreground" Value="{StaticResource myLabelBrush}"></Setter>
+            </Style>
+        
+        <DataTemplate x:Key="agentTemplate">
+            <WrapPanel>
+                <TextBlock Text="{Binding Path=ID}" 
+                           Padding="3, 0"
+                           Width="50"></TextBlock>
+                <TextBlock Text="{Binding Path=CodeName}" 
+                           Padding="3, 0"
+                           Width="50"></TextBlock>
+                <TextBlock Text="{Binding Path=Speciality}" 
+                           Padding="3, 0"
+                           Width="50"></TextBlock>
+                <TextBlock Text="{Binding Path=Assignment}" 
+                           Padding="3, 0"
+                           Width="50"></TextBlock>
+            </WrapPanel>
+        </DataTemplate>
+       
+    </Application.Resources>
+</Application>
